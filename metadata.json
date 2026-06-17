@@ -1,0 +1,6 @@
+{
+  "name": "Nonvoy Kalkulyatori",
+  "description": "Nonvoylar uchun un, suv, xamir massasi va kunlik daromadni mukammal hisoblovchi dastur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
