@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "DailyLog": {
+      "title": "DailyLog",
+      "description": "Daily nonvoy accounting and ledger record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "bagsCount": { "type": "number" },
+        "breadPerBag": { "type": "number" },
+        "flourPrice": { "type": "number" },
+        "sellingPrice": { "type": "number" },
+        "eveningSoldBreads": { "type": "number" },
+        "eveningSellingPrice": { "type": "number" },
+        "eveningDamagedBreads": { "type": "number" },
+        "eveningFlourPrice": { "type": "number" },
+        "eveningNote": { "type": "string" },
+        "additionalExpenses": { "type": "number" },
+        "useMultiPrice": { "type": "boolean" },
+        "totalRevenue": { "type": "number" },
+        "totalExpenses": { "type": "number" },
+        "netProfit": { "type": "number" },
+        "flourPercentage": { "type": "number" },
+        "damagedPercentage": { "type": "number" },
+        "bakerName": { "type": "string" }
+      },
+      "required": ["id", "date", "bagsCount", "breadPerBag", "flourPrice", "sellingPrice", "eveningSoldBreads", "totalRevenue", "totalExpenses", "netProfit"]
+    },
+    "CustomExpense": {
+      "title": "CustomExpense",
+      "description": "Custom ingredient or operational expense",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "amount": { "type": "number" },
+        "category": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "name", "amount", "category", "date"]
+    },
+    "SalaryRecord": {
+      "title": "SalaryRecord",
+      "description": "Employee salary disbursement record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "workerName": { "type": "string" },
+        "amount": { "type": "number" },
+        "date": { "type": "string" },
+        "period": { "type": "string", "enum": ["kunlik", "haftalik", "oylik"] },
+        "note": { "type": "string" }
+      },
+      "required": ["id", "workerName", "amount", "date", "period"]
+    }
+  },
+  "firestore": {
+    "/logs/{logId}": {
+      "schema": "DailyLog",
+      "description": "Collection of daily baked and sales logging data"
+    },
+    "/expenses/{expenseId}": {
+      "schema": "CustomExpense",
+      "description": "Collection of custom operational expenses"
+    },
+    "/salaries/{salaryId}": {
+      "schema": "SalaryRecord",
+      "description": "Collection of employee salaries details"
+    }
+  }
+}

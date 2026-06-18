@@ -249,68 +249,68 @@ export default function Ledger({
       {/* KPI Cards section */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Total revenue / profit card */}
-        <div className={`p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help transition-all duration-300 ${
+        <div className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help transition-all duration-300 ${
           isDark 
             ? 'bg-gradient-to-br from-amber-950/20 to-amber-900/5 border-amber-950/60 shadow-[#0f0a08]/40' 
             : 'bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-amber-100/30 border-amber-200/50 shadow-sm'
         }`}>
-          <span className={`text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-amber-400' : 'text-slate-500'}`}>Jami Sof Foyda</span>
-          <div className="my-2 text-left">
-            <span className={`text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl font-black font-sans block leading-snug break-words tracking-tight ${isDark ? 'text-amber-400' : 'text-amber-805 text-amber-800'}`}>
+          <span className={`text-[9px] xs:text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-amber-400' : 'text-slate-500'}`}>Jami Sof Foyda</span>
+          <div className="my-1.5 text-left">
+            <span className={`text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-black font-sans block leading-tight break-all tracking-tight ${isDark ? 'text-amber-400' : 'text-amber-850 text-amber-800'}`}>
               {formatUZS(totalNetProfit)}
             </span>
           </div>
-          <span className={`text-[10px] font-bold flex items-center gap-0.5 ${isDark ? 'text-amber-300' : 'text-amber-700'}`}>
-            <TrendingUp className="w-3.5 h-3.5 shrink-0" /> Hisoblangan daromad
+          <span className={`text-[9px] xs:text-[10px] font-bold flex items-center gap-0.5 ${isDark ? 'text-amber-300' : 'text-amber-700'}`}>
+            <TrendingUp className="w-3.5 h-3.5 shrink-0" /> Hisoblangan foyda
           </span>
         </div>
 
         {/* Flour Used */}
-        <div className={`p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
+        <div className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
           isDark ? 'bg-[#2A221E] border-[#3E322A]' : 'bg-[#FAF6F0]/60 border-amber-100'
         }`}>
-          <span className={`text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Jami Ishlatilgan Un</span>
-          <div className="my-2 text-left">
-            <span className={`text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-snug break-words ${isDark ? 'text-slate-100 font-bold' : 'text-slate-800'}`}>
+          <span className={`text-[9px] xs:text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Jami Ishlatilgan Un</span>
+          <div className="my-1.5 text-left">
+            <span className={`text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-tight break-all ${isDark ? 'text-slate-100 font-bold' : 'text-slate-800'}`}>
               {formatNum(totalBagsUsed)} qop
             </span>
           </div>
-          <span className={`text-[10px] font-bold ${isDark ? 'text-slate-400' : 'text-slate-650 text-slate-600'}`}>
+          <span className={`text-[9px] xs:text-[10px] font-bold ${isDark ? 'text-slate-400' : 'text-slate-650 text-slate-600'}`}>
             Jami {formatNum(totalBagsUsed * 50)} kg un
           </span>
         </div>
 
         {/* Total Breads Baked */}
-        <div className={`p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
+        <div className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
           isDark ? 'bg-[#2A221E] border-[#3E322A]' : 'bg-[#FAF6F0]/60 border-amber-100'
         }`}>
-          <span className={`text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Jami Pishgan Non</span>
-          <div className="my-2 text-left">
-            <span className={`text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-snug break-words ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>
+          <span className={`text-[9px] xs:text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Jami Pishgan Non</span>
+          <div className="my-1.5 text-left">
+            <span className={`text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-tight break-all ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>
               {formatNum(totalBreadsBaked)} dona
             </span>
           </div>
-          <span className={`text-[10px] font-semibold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-            Mijozlarga yetkazilgani
+          <span className={`text-[9px] xs:text-[10px] font-semibold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+            Yetkazilgani
           </span>
         </div>
 
         {/* Average yield */}
-        <div className={`p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
+        <div className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col justify-between premium-gold-card gold-lite-glow cursor-help ${
           isDark ? 'bg-[#2A221E] border-[#3E322A]' : 'bg-[#FAF6F0]/60 border-amber-100'
         }`}>
-          <span className={`text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>O'rtacha chiqish (qopdan)</span>
-          <div className="my-2 text-left">
-            <span className={`text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-snug break-words ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>
+          <span className={`text-[9px] xs:text-[10px] font-bold uppercase tracking-wider block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>O'rtacha chiqish (qopdan)</span>
+          <div className="my-1.5 text-left">
+            <span className={`text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-black font-mono block leading-tight break-all ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>
               {avgYield.toFixed(0)} dona
             </span>
           </div>
           {averageDamagedRate > 0 ? (
-            <span className={`text-[10px] font-bold flex items-center gap-0.5 ${averageDamagedRate > 1.5 ? 'text-amber-500' : 'text-emerald-500'}`}>
-              Yo'qotish (singan): {averageDamagedRate.toFixed(1)}%
+            <span className={`text-[9px] xs:text-[10px] font-bold flex items-center gap-0.5 ${averageDamagedRate > 1.5 ? 'text-amber-500' : 'text-emerald-500'}`}>
+              Zarar (singan): {averageDamagedRate.toFixed(1)}%
             </span>
           ) : (
-            <span className={`text-[10px] font-medium ${isDark ? 'text-slate-450' : 'text-slate-500'}`}>Chiqish ko'rsatkichi</span>
+            <span className={`text-[9px] xs:text-[10px] font-medium ${isDark ? 'text-slate-450' : 'text-slate-500'}`}>Chiqish ko'rsatkichi</span>
           )}
         </div>
       </div>
@@ -602,7 +602,8 @@ export default function Ledger({
       <div className="space-y-3">
         <span className={`text-xs font-black block uppercase tracking-wider ${isDark ? 'text-slate-300' : 'text-slate-550 text-slate-500'}`}>Kunlik qatnovlar ro'yxati</span>
         
-        <div className={`overflow-x-auto rounded-2xl border transition-all ${isDark ? 'border-[#3E322A]' : 'border-slate-150'}`}>
+        {/* Desktop View Table: Shown only on medium screens and larger */}
+        <div className={`hidden md:block overflow-x-auto rounded-2xl border transition-all ${isDark ? 'border-[#3E322A]' : 'border-slate-150'}`}>
           <table className="w-full text-left text-sm border-collapse">
             <thead>
               <tr className={`border-b text-xs font-black uppercase tracking-wider transition-colors ${
@@ -753,6 +754,177 @@ export default function Ledger({
               )}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile View Card List: Optimized explicitly for smartphones */}
+        <div className="block md:hidden space-y-4 animate-fade-in">
+          {logs.map((item) => {
+            const isProfit = item.calculatedProfit >= 0;
+            const soldQty = item.totalBreads - item.damagedBreads;
+            return (
+              <div 
+                key={item.id} 
+                className={`p-4 rounded-2xl border flex flex-col gap-3 shadow-sm transition-all ${
+                  isDark 
+                    ? 'bg-[#251E1B]/80 border-[#3E322A]' 
+                    : 'bg-slate-50/70 border-slate-150'
+                }`}
+              >
+                {/* Mobile Card Row 1: Date and Sacks */}
+                <div className="flex items-center justify-between pb-2 border-b border-dashed border-[#3E322A]/20">
+                  <div className="flex flex-col text-left">
+                    <span className={`text-xs font-black font-mono ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>
+                      📅 {item.date}
+                    </span>
+                    <span className={`text-[10px] font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'} mt-0.5`}>
+                      ⚡ {item.bagsUsed} qop un (1 qopdan ~{item.breadPerBag} ta)
+                    </span>
+                  </div>
+
+                  {/* Delete Trigger on mobile */}
+                  <div className="shrink-0">
+                    {deleteConfirmId === item.id ? (
+                      <div className="flex items-center gap-1 bg-rose-500/10 p-1 rounded-lg border border-rose-500/10">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setLogs(logs.filter(it => it.id !== item.id));
+                            setDeleteConfirmId(null);
+                          }}
+                          className="px-2 py-1 bg-rose-600 hover:bg-rose-700 text-white font-extrabold rounded-lg text-[9px] uppercase cursor-pointer"
+                        >
+                          O'chirish
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setDeleteConfirmId(null)}
+                          className={`px-2 py-1 font-bold rounded-lg text-[9px] uppercase cursor-pointer ${
+                            isDark ? 'bg-[#1C1613] text-slate-300' : 'bg-white text-slate-700'
+                          }`}
+                        >
+                          Yo'q
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setDeleteConfirmId(item.id)}
+                        className={`p-1.5 px-3 border rounded-xl font-bold transition-all duration-200 text-[10px] whitespace-nowrap cursor-pointer ${
+                          isDark 
+                            ? 'text-rose-405 bg-rose-950/20 border-rose-900/20 hover:bg-rose-950/40' 
+                            : 'text-slate-500 bg-white hover:bg-rose-50 border-slate-200'
+                        }`}
+                      >
+                        O'chirish
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Mobile Card Row 2: Quantities indicators with labels */}
+                <div className="grid grid-cols-2 gap-2 text-left">
+                  <div className={`p-2 rounded-xl border ${isDark ? 'bg-[#1C1613]/55 border-[#3E322A]/50' : 'bg-white border-slate-200'}`}>
+                    <span className={`text-[8.5px] font-extrabold uppercase tracking-wide block leading-none mb-1 text-slate-405 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Sotilgan non</span>
+                    <span className={`font-black font-mono text-sm sm:text-base block ${isDark ? 'text-emerald-400' : 'text-slate-800'}`}>
+                      {formatNum(soldQty)} <span className="text-[10px] font-bold text-slate-400">dona</span>
+                    </span>
+                  </div>
+
+                  <div className={`p-2 rounded-xl border ${isDark ? 'bg-[#1C1613]/55 border-[#3E322A]/50' : 'bg-white border-slate-200'}`}>
+                    <span className={`text-[8.5px] font-extrabold uppercase tracking-wide block leading-none mb-1 text-slate-405 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Zarar (singan)</span>
+                    <span className={`font-black font-mono text-sm sm:text-base block ${item.damagedBreads > 0 ? 'text-rose-455 text-rose-400' : 'text-slate-400'}`}>
+                      {item.damagedBreads} <span className="text-[10px] font-bold text-slate-400">dona</span>
+                    </span>
+                  </div>
+                </div>
+
+                {/* Mobile Card Row 3: Financial summaries - spacious layout */}
+                <div className={`p-3 rounded-xl border flex items-center justify-between text-left ${
+                  isProfit 
+                    ? (isDark ? 'bg-emerald-950/30 border-emerald-500/20' : 'bg-emerald-50 border-emerald-100')
+                    : (isDark ? 'bg-[#31110e]/20 border-rose-900/30' : 'bg-rose-50 border-rose-100')
+                }`}>
+                  <div>
+                    <span className={`text-[8px] font-bold uppercase block tracking-wider leading-none mb-1 ${
+                      isProfit 
+                        ? (isDark ? 'text-emerald-405 text-emerald-400' : 'text-emerald-800') 
+                        : (isDark ? 'text-rose-405' : 'text-rose-800')
+                    }`}>
+                      {isProfit ? '💵 Kunlik Sof Foyda' : '📉 Kunlik Zarar'}
+                    </span>
+                    <span className={`text-base font-black font-mono select-all tracking-tight ${
+                      isProfit 
+                        ? (isDark ? 'text-emerald-400' : 'text-emerald-700 bg-emerald-50') 
+                        : (isDark ? 'text-rose-400' : 'text-rose-700')
+                    }`}>
+                      {formatUZS(item.calculatedProfit)}
+                    </span>
+                  </div>
+                  
+                  <div className="text-right">
+                    <span className={`text-[8px] font-semibold text-slate-400 block leading-none mb-1`}>Tarif / Narxi</span>
+                    <span className={`text-[10px] font-bold ${isDark ? 'text-slate-350 text-slate-300' : 'text-slate-700'}`}>
+                      {item.breadSales && item.breadSales.length > 0 ? "Aralash narxda" : `${formatNum(item.sellingPrice)} so'mdan`}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bread type tags if multi-prices were used */}
+                {item.breadSales && item.breadSales.length > 0 && (
+                  <div className="space-y-1 py-0.5 text-left">
+                    <span className="text-[8.5px] font-extrabold text-slate-400 block uppercase tracking-wide">Sotilgan non turlari:</span>
+                    <div className="flex flex-wrap gap-1 max-w-full">
+                      {item.breadSales.map((sale, sIdx) => (
+                        <span 
+                          key={sale.id || sIdx} 
+                          className={`text-[8.5px] px-2 py-0.5 rounded font-black tracking-tight border ${
+                            isDark 
+                              ? 'bg-[#1C1613] border-[#3E322A] text-amber-300/90' 
+                              : 'bg-white border-slate-200 text-slate-600'
+                          }`}
+                        >
+                          {sale.name || `${sIdx+1}-tur`}{sale.weight ? ` (${sale.weight}g)` : ''}: {sale.quantity} ta × {formatNum(sale.price)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Optional description notes on mobile */}
+                {item.note && (
+                  <div className={`text-[10px] leading-relaxed italic p-2 border border-dashed rounded-xl font-medium text-left ${
+                    isDark 
+                      ? 'bg-[#1C1613]/40 border-amber-900/10 text-slate-400' 
+                      : 'bg-white border-amber-200/50 text-slate-500'
+                  }`}>
+                    📝 {item.note}
+                  </div>
+                )}
+
+              </div>
+            );
+          })}
+
+          {logs.length === 0 && (
+            <div className="flex flex-col items-center justify-center p-8 text-center text-slate-400 bg-slate-50 dark:bg-[#251E1B]/55 rounded-2xl border border-dashed border-[#3E322A]/20">
+              <AlertTriangle className="w-8 h-8 text-amber-500/80 mb-2" />
+              <div className={`text-xs font-bold max-w-xs ${isDark ? 'text-slate-300' : 'text-slate-600'} leading-relaxed`}>
+                Daftaringiz bo'sh. O'zingiz kiritishingiz yoki tushunish oson bo'lishi uchun oldingi kunlik namuna statistikani yuklang.
+              </div>
+              <button
+                type="button"
+                id="load-sample-btn-mobile"
+                onClick={handleLoadSampleData}
+                className={`px-3 py-1.5 border text-xs font-bold rounded-xl transition-all cursor-pointer mt-3.5 ${
+                  isDark 
+                    ? 'bg-amber-950/20 border-amber-900/30 text-amber-400' 
+                    : 'bg-white border-slate-200 text-slate-650'
+                }`}
+              >
+                Namuna yuklash
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

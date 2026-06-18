@@ -4,11 +4,13 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Flame, Star, RefreshCw, Award, Sun, Moon, ArrowRight, HelpCircle, Check, BookOpen, DollarSign, Key, Calculator, Settings, Plus, Menu, X, Trash2, Palette, History, Edit2 } from 'lucide-react';
+import { Flame, Star, RefreshCw, Award, Sun, Moon, ArrowRight, HelpCircle, Check, BookOpen, DollarSign, Key, Calculator, Settings, Plus, Menu, X, Trash2, Palette, History, Edit2, Cloud, CloudOff, CloudLightning } from 'lucide-react';
 import { DailyLog, CustomExpense, SalaryRecord, BreadSaleItem } from './types';
 import { INITIAL_EXPENSES, formatUZS, formatNum } from './data';
 import Ledger from './components/Ledger';
 import HistoryTimeline from './components/HistoryTimeline';
+import { testFirebaseConnection } from './firebase';
+import { mergeAndFetchFromFirestore, backupAllToFirestore } from './firebaseSync';
 
 const UzbekNonLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
   <svg className={`${className} select-none`} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -475,6 +477,56 @@ export default function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  // Firebase synchronizer states
+  const [firebaseConnected, setFirebaseConnected] = useState<boolean>(false);
+  const [syncStatus, setSyncStatus] = useState<'idle' | 'syncing' | 'success' | 'error'>('idle');
+  const [isFirebaseInitialized, setIsFirebaseInitialized] = useState<boolean>(false);
+
+  // Initial load and merge from Firebase Firestore
+  useEffect(() => {
+    async function initFirebaseSync() {
+      const connected = await testFirebaseConnection();
+      setFirebaseConnected(connected);
+      if (connected) {
+        setSyncStatus('syncing');
+        try {
+          const { mergedLogs, mergedExpenses, mergedSalaries } = await mergeAndFetchFromFirestore(
+            JSON.parse(localStorage.getItem('nonvoy_logs') || '[]'),
+            JSON.parse(localStorage.getItem('nonvoy_expenses') || '[]'),
+            JSON.parse(localStorage.getItem('nonvoy_salaries') || '[]')
+          );
+          setLogs(mergedLogs);
+          setExpenses(mergedExpenses);
+          setSalaries(mergedSalaries);
+          setSyncStatus('success');
+        } catch (e) {
+          console.error("Firebase initial sync failed:", e);
+          setSyncStatus('error');
+        }
+      }
+      setIsFirebaseInitialized(true);
+    }
+    initFirebaseSync();
+  }, []);
+
+  // Automatic real-time backup to Firebase Firestore (debounced)
+  useEffect(() => {
+    if (!isFirebaseInitialized || !firebaseConnected) return;
+
+    const delayDebounceFn = setTimeout(async () => {
+      setSyncStatus('syncing');
+      try {
+        await backupAllToFirestore(logs, expenses, salaries);
+        setSyncStatus('success');
+      } catch (err) {
+        console.error("Firebase auto backup failed:", err);
+        setSyncStatus('error');
+      }
+    }, 1500);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [logs, expenses, salaries, isFirebaseInitialized, firebaseConnected]);
+
   // Save changes to localStorage for persistent durability
   useEffect(() => {
     localStorage.setItem('nonvoy_expenses', JSON.stringify(expenses));
@@ -890,11 +942,44 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Cloud Sync Status Pill */}
+            <div className={`flex items-center gap-1.5 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-xl border font-mono text-[9px] sm:text-[10px] uppercase font-bold select-none transition-all ${
+              !firebaseConnected
+                ? 'bg-rose-500/5 border-rose-500/10 text-rose-505 text-rose-400'
+                : syncStatus === 'syncing'
+                ? 'bg-amber-500/5 border-amber-500/10 text-amber-500 animate-pulse'
+                : syncStatus === 'error'
+                ? 'bg-rose-500/5 border-rose-500/20 text-rose-400'
+                : 'bg-emerald-500/5 border-emerald-500/10 text-emerald-500'
+            }`} title="Firebase Cloud Zaxirasi">
+              {!firebaseConnected ? (
+                <>
+                  <CloudOff className="w-3.5 h-3.5 shrink-0" />
+                  <span className="leading-none">Oflayn</span>
+                </>
+              ) : syncStatus === 'syncing' ? (
+                <>
+                  <RefreshCw className="w-3.5 h-3.5 animate-spin shrink-0" />
+                  <span className="hidden xs:inline leading-none">Sinxronlash...</span>
+                </>
+              ) : syncStatus === 'error' ? (
+                <>
+                  <CloudLightning className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                  <span className="leading-none">Xato</span>
+                </>
+              ) : (
+                <>
+                  <Cloud className="w-3.5 h-3.5 fill-emerald-500/10 shrink-0" />
+                  <span className="hidden xs:inline leading-none text-emerald-500">Bulutda</span>
+                </>
+              )}
+            </div>
+
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className={`p-2 rounded-xl transition-all cursor-pointer border ${
-                theme === 'dark' ? 'bg-[#2E241E] border-[#42342A] text-amber-400 hover:bg-[#392C23]' : 'bg-amber-100/60 border-amber-200 text-amber-1000 text-amber-900 hover:bg-amber-100'
+                theme === 'dark' ? 'bg-[#2E241E] border-[#42342A] text-amber-400 hover:bg-[#392C23]' : 'bg-amber-100/60 border-amber-200 text-[#CD853F] hover:bg-amber-100'
               }`}
               title="Qorong'u/Yorug'"
             >
