@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Flame, Star, RefreshCw, Award, Sun, Moon, ArrowRight, HelpCircle, Check, BookOpen, DollarSign, Key, Calculator, Settings, Plus, Menu, X, Trash2, Palette, History, Edit2, Cloud, CloudOff, CloudLightning } from 'lucide-react';
+import { Flame, Star, RefreshCw, Award, Sun, Moon, ArrowRight, HelpCircle, Check, BookOpen, DollarSign, Key, Calculator, Settings, Plus, Menu, X, Trash2, Palette, History, Edit2, Cloud, CloudOff, CloudLightning, Columns } from 'lucide-react';
 import { DailyLog, CustomExpense, SalaryRecord, BreadSaleItem } from './types';
 import { INITIAL_EXPENSES, formatUZS, formatNum } from './data';
 import Ledger from './components/Ledger';
@@ -395,6 +395,12 @@ export default function App() {
     return saved === 'dark' ? 'dark' : 'light';
   });
 
+  // Split View / Dual Window View state
+  const [isSplitView, setIsSplitView] = useState<boolean>(() => {
+    const saved = localStorage.getItem('nonvoy_split_view');
+    return saved === 'true';
+  });
+
   // Employee Salaries tracking state
   const [salaries, setSalaries] = useState<SalaryRecord[]>(() => {
     const saved = localStorage.getItem('nonvoy_salaries');
@@ -539,6 +545,10 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('nonvoy_theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    localStorage.setItem('nonvoy_split_view', isSplitView ? 'true' : 'false');
+  }, [isSplitView]);
 
   useEffect(() => {
     localStorage.setItem('nonvoy_salaries', JSON.stringify(salaries));
@@ -976,6 +986,26 @@ export default function App() {
               )}
             </div>
 
+            {/* Split View Toggle Button */}
+            <button
+              onClick={() => setIsSplitView(!isSplitView)}
+              className={`p-2.5 rounded-xl transition-all cursor-pointer border flex items-center gap-1.5 text-xs font-black ${
+                theme === 'dark'
+                  ? isSplitView
+                    ? 'bg-amber-600/20 border-amber-500 text-amber-400 hover:bg-amber-600/30 font-semibold'
+                    : 'bg-[#2E241E] border-[#42342A] text-slate-400 hover:bg-[#392C23] hover:text-slate-250 font-semibold'
+                  : isSplitView
+                    ? 'bg-amber-600 text-white border-transparent shadow shadow-amber-600/30'
+                    : 'bg-amber-100/60 border-amber-200 text-amber-800 hover:bg-amber-100'
+              }`}
+              title={isSplitView ? "Standart rejimga qaytish" : "Ikkita oynali rejimga o'tish"}
+            >
+              <Columns className="w-4 h-4 shrink-0" />
+              <span className="hidden xs:inline-block text-[9px] font-black uppercase tracking-wider leading-none">
+                {isSplitView ? "1-Oyna (Normal)" : "2x Oyna (Split)"}
+              </span>
+            </button>
+
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className={`p-2 rounded-xl transition-all cursor-pointer border ${
@@ -1177,19 +1207,19 @@ export default function App() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px] leading-normal font-sans font-medium">
                 <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/90 border-[#3E3027] text-slate-350' : 'bg-white/95 border-amber-100 text-slate-600'
+                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
                 }`}>
                   <span className="font-extrabold text-amber-500 block mb-0.5">☀️ 1. Un qopini yozing</span>
                   Qop sonini yozing, suv, tuz va drojji retsepti tezda hisoblanadi.
                 </div>
                 <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/90 border-[#3E3027] text-slate-350' : 'bg-white/95 border-amber-100 text-slate-600'
+                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
                 }`}>
                   <span className="font-extrabold text-amber-500 block mb-0.5">🌙 2. Sotilgan nonni yozing</span>
                   Kechqurun sotilgan dona non sonini kiriting. Tizim sof foydani hisoblaydi.
                 </div>
                 <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/90 border-[#3E3027] text-slate-350' : 'bg-white/95 border-amber-100 text-slate-600'
+                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
                 }`}>
                   <span className="font-extrabold text-amber-500 block mb-0.5">📓 3. Daftarga yozib qo'ying</span>
                   "Kunlik foydani yozish" tugmasini bosing — barcha tarix jurnalda saqlanadi.
@@ -1198,10 +1228,10 @@ export default function App() {
             </div>
 
             {/* THE COMBINED COMPACT COCKPIT GRID */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start">
+            <div className={`grid ${isSplitView ? 'grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 sm:h-[calc(100vh-140px)] overflow-visible sm:overflow-hidden items-stretch' : 'grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start'}`}>
               
               {/* LEFT COLUMN: THE COMPACT INTEGRATED CALCULATOR (☀️ ERTALAB & 🌙 KECHQURUN) */}
-              <div className="lg:col-span-5 space-y-4 sm:space-y-6" id="calculator-section">
+              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16 space-y-4' : 'lg:col-span-5 space-y-4 sm:space-y-6'}`} id="calculator-section">
                 
                 {/* COMPACT CARD FOR CALCULATION */}
                 <div className={`p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border shadow-xl flex flex-col justify-between transition-all ${
@@ -1211,7 +1241,7 @@ export default function App() {
                 }`}>
                   
                   {/* Tabs to switch within the compact calc container */}
-                  <div className="flex border-b border-amber-900/10 pb-4 mb-5 justify-between items-center">
+                  <div className="flex flex-col sm:flex-row gap-3 border-b border-amber-900/10 pb-4 mb-5 justify-between sm:items-center text-left">
                     <div className="flex items-center gap-1.5 animate-fade-in">
                       <span className="p-1.5 bg-amber-600 rounded-lg text-white">
                         <Calculator className="w-4 h-4" />
@@ -1221,11 +1251,11 @@ export default function App() {
                       }`}>Bugungi Hisob-kitob</span>
                     </div>
 
-                    <div className="flex bg-[#2E241E]/40 p-1 rounded-xl border border-amber-900/10 shrink-0 select-none">
+                    <div className="flex bg-[#2E241E]/40 p-1 rounded-xl border border-amber-900/10 shrink-0 select-none self-start sm:self-auto w-full sm:w-auto">
                       <button
                         type="button"
                         onClick={() => setCalculatorTab('morning')}
-                        className={`px-3.5 py-1.5 text-[10px] font-black uppercase rounded-lg border transition-all duration-300 scale-100 hover:scale-[1.03] active:scale-95 hover:shadow-[0_0_10px_rgba(245,158,11,0.55)] cursor-pointer ${
+                        className={`flex-1 sm:flex-initial text-center px-3.5 py-1.5 text-[10px] font-black uppercase rounded-lg border transition-all duration-300 cursor-pointer ${
                           calculatorTab === 'morning'
                             ? 'bg-amber-600 border-amber-500 text-white font-extrabold shadow'
                             : 'border-transparent text-slate-400 hover:text-slate-200'
@@ -1236,7 +1266,7 @@ export default function App() {
                       <button
                         type="button"
                         onClick={() => setCalculatorTab('evening')}
-                        className={`px-3.5 py-1.5 text-[10px] font-black uppercase rounded-lg border transition-all duration-300 scale-100 hover:scale-[1.03] active:scale-95 hover:shadow-[0_0_10px_rgba(245,158,11,0.55)] cursor-pointer ${
+                        className={`flex-1 sm:flex-initial text-center px-3.5 py-1.5 text-[10px] font-black uppercase rounded-lg border transition-all duration-300 cursor-pointer ${
                           calculatorTab === 'evening'
                             ? 'bg-amber-600 border-amber-500 text-white font-extrabold shadow'
                             : 'border-transparent text-slate-400 hover:text-slate-200'
@@ -1359,15 +1389,15 @@ export default function App() {
                           </div>
                           
                           {/* Quick selectors for easy setting */}
-                          <div className="flex justify-between gap-1.5 mt-2.5">
+                          <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-2.5">
                             {[390, 395, 397, 400, 410].map((num) => (
                               <button
                                 key={num}
                                 type="button"
                                 onClick={() => setBreadPerBag(num)}
-                                className={`flex-1 py-1 text-[10px] font-black rounded-lg transition-all border cursor-pointer ${
+                                className={`flex-1 min-w-[50px] py-1 text-[10px] font-black rounded-lg transition-all border cursor-pointer ${
                                   breadPerBag === num
-                                    ? 'bg-white text-orange-650 text-orange-600 border-transparent shadow'
+                                    ? 'bg-white text-orange-600 border-transparent shadow'
                                     : 'bg-black/10 text-white/90 border-transparent hover:bg-black/20'
                                 }`}
                               >
@@ -1378,20 +1408,20 @@ export default function App() {
                         </div>
 
                         {/* Row 2: Large total display banner */}
-                        <div className="p-4 bg-black/15 rounded-2xl flex flex-col items-center justify-center text-center border border-white/10 shadow-inner">
-                          <span className="text-[10px] font-semibold text-amber-100 uppercase tracking-wider mb-1">
+                        <div className="p-3 sm:p-4 bg-black/15 rounded-2xl flex flex-col items-center justify-center text-center border border-white/10 shadow-inner">
+                          <span className="text-[9px] sm:text-[10px] font-semibold text-amber-100 uppercase tracking-wider mb-1 px-1 text-center leading-normal">
                             {bagsCount} qop un uchun JAMI TAXMINIY CHIQISH:
                           </span>
                           <div className="flex items-baseline gap-1.5 mt-0.5">
-                            <span className="text-4xl font-extrabold font-mono tracking-tight text-white mb-0.5 drop-shadow">
+                            <span className="text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-white mb-0.5 drop-shadow">
                               {formatNum(expectedTotalBreads)}
                             </span>
                             <span className="text-xs font-bold text-amber-100">
                               dona
                             </span>
                           </div>
-                          <span className="text-[10px] font-bold text-[#2F241E] uppercase tracking-wide mt-1.5">
-                            {bagsCount} qop un x {breadPerBag} ta non = {formatNum(expectedTotalBreads)} ta tayyor issiq non
+                          <span className="text-[9.5px] sm:text-[10px] font-bold text-orange-100 uppercase tracking-wide mt-1.5 text-center leading-relaxed">
+                            {bagsCount} qop x {breadPerBag} non = {formatNum(expectedTotalBreads)} ta issiq non
                           </span>
                         </div>
                       </div>
@@ -1872,7 +1902,7 @@ export default function App() {
               </div>
 
               {/* RIGHT COLUMN: THE LEDGER REGISTER AND STATS (📓 SHAXSIY DAFTAR) */}
-              <div className="lg:col-span-7" id="ledger-section">
+              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16' : 'lg:col-span-7'}`} id="ledger-section">
                 {/* Ledger component contains complete statistics dashboard and tables */}
                 <Ledger
                   logs={logs}
