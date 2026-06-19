@@ -57,14 +57,36 @@ export const INITIAL_EXPENSES: CustomExpense[] = [
 ];
 
 /**
- * Format number to Uzbek Soum (so'm)
+ * Format number to Uzbek Soum (so'm) or Kazakhstan Tenge (₸) with dual conversion based on system preference
  */
 export function formatUZS(amount: number): string {
-  return new Intl.NumberFormat('uz-UZ', {
-    style: 'currency',
-    currency: 'UZS',
+  const selectedCurrency = localStorage.getItem('nonvoy_currency') || 'UZS';
+  
+  if (selectedCurrency === 'KZT') {
+    // Amount is in KZT. Convert to UZS (1 KZT = 27 UZS)
+    const formattedKZT = new Intl.NumberFormat('ru-RU', {
+      maximumFractionDigits: 0
+    }).format(Math.round(amount));
+    
+    const uzsEquivalent = amount * 27;
+    const formattedUZS = new Intl.NumberFormat('ru-RU', {
+      maximumFractionDigits: 0
+    }).format(Math.round(uzsEquivalent));
+    
+    return `${formattedKZT} ₸ (~${formattedUZS} so'm)`;
+  }
+  
+  // Amount is in UZS. Convert to KZT (1 KZT = 27 UZS)
+  const formattedUZS = new Intl.NumberFormat('ru-RU', {
     maximumFractionDigits: 0
-  }).format(amount).replace('UZS', 'so\'m');
+  }).format(Math.round(amount));
+  
+  const kztEquivalent = amount / 27;
+  const formattedKZT = new Intl.NumberFormat('ru-RU', {
+    maximumFractionDigits: 0
+  }).format(Math.round(kztEquivalent));
+  
+  return `${formattedUZS} so'm (~${formattedKZT} ₸)`;
 }
 
 /**

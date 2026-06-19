@@ -96,9 +96,9 @@ const TRANSLATIONS = {
     activeLabel: 'Faol:',
     cancel: 'Bekor qilish',
     breadPresetTitle: 'Standart non turlari va narxlari sozlamasi',
-    breadPresetDesc: 'Bu yerda tayyorlanadigan standart non turlarining ro\'yxati va narxlarini sozlab qo\'ysangiz, har kecha sotuvni kiritayotganda ularni birgina tugma bilan tezda qo\'shishingiz mumkin. Sayt sozlamalaridan oson o\'zgaradi.',
+    breadPresetDesc: 'Bu yerda tayyorlanadigan standart non turlari\ning ro\'yxati va narxlarini sozlab qo\'ysangiz, har kecha sotuvni kiritayotganda ularni birgina tugma bilan tezda qo\'shishingiz mumkin. Sayt sozlamalaridan oson o\'zgaradi.',
     breadNameHeader: 'Non turi nomi',
-    breadPriceHeader: 'Sotish narxi (so\'m)',
+    breadPriceHeader: 'Sotish narxi',
     breadWeightHeader: 'Vazni (gramm)',
     breadWeightLabel: 'Non Og\'irligi (g)',
     addPresetBtn: '+ Standart non turi qo\'shish'
@@ -143,7 +143,7 @@ const TRANSLATIONS = {
     breadPresetTitle: 'Default Bread Types & Rates Configuration',
     breadPresetDesc: 'Configure the list of default bread types and historical prices here. Quickly select them inside the evening multi-price calculator to save precious physical time.',
     breadNameHeader: 'Bread Type Name',
-    breadPriceHeader: 'Default Selling Price (UZS)',
+    breadPriceHeader: 'Default Selling Price',
     breadWeightHeader: 'Weight (grams)',
     breadWeightLabel: 'Bread Weight (g)',
     addPresetBtn: '+ Add Default Bread Spec'
@@ -188,10 +188,55 @@ const TRANSLATIONS = {
     breadPresetTitle: 'Настройка сортов хлеба и цен по умолчанию',
     breadPresetDesc: 'Задайте стандартный перечень сортов и цен вашего хлеба здесь, чтобы быстро добавлять их в вечерний баланс в один клик.',
     breadNameHeader: 'Название сорта',
-    breadPriceHeader: 'Цена продажи (сум)',
+    breadPriceHeader: 'Цена продажи',
     breadWeightHeader: 'Вес (грамм)',
     breadWeightLabel: 'Вес хлеба (г)',
     addPresetBtn: '+ Добавить стандартный сорт'
+  },
+  kk: {
+    settings: 'Баптаулар',
+    settingsTitle: '⚙️ Жүйелік баптаулар',
+    settingsDesc: 'Артқы фонды, қаріпті, тілді және әдепкі нан түрлерінің баптауларын осы жерден өзгертіңіз.',
+    tabBg: '🎨 Артқы фон',
+    tabFont: '🔤 Қаріп стилі',
+    tabLang: '🌐 Тілдер (Languages)',
+    tabBread: '🍞 Нан түрлері',
+    bgType: 'Фон түрі (Background Type)',
+    bgGradients: 'Әдемі градиенттер',
+    bgImages: 'Галереядан сурет',
+    bgSelectGradient: 'Градиентті таңдау:',
+    bgCustomLoad: 'Галереядан жүктеу (Image Upload):',
+    bgCustomBtn: '📁 Суретті таңдау',
+    bgCustomDelete: 'Өшіру',
+    bgNoImage: 'Сурет жүктелмеген',
+    dimPct: 'Күңгірттігі (Overlay):',
+    blurLevel: 'Бұлыңғырлық (Blur):',
+    fontSelect: 'Мәтін қаріпі (Typography):',
+    langSelect: 'Жүйе тілі (App Language):',
+    saveClose: 'Дайын',
+    welcomeTitle: 'Наубайшының есеп дәптері мен калькуляторы',
+    welcomeSubtitle: 'Наубайханадағы күнді оңай бастаңыз, қамыр илеуді дәл жоспарлаңыз және кешке сатылған нандар есебінде таза пайданы дәптерде үнемі жинақтаңыз.',
+    howToTitle: 'Жұмыс тәртібінің нұсқаулығы (Сайтты қалай пайдалану керек?):',
+    howToStep1: '☀️ 1. Таңертең дайындалатын ұнды белгілеңіз',
+    howToStep1Desc: 'Таңертең ұн дайындаған кезде қап санын жазыңыз. Сол сәтте-ақ су, тұз, ашытқы рецептін аласыз және күтілетін нан көлемін білесіз.',
+    howToStep2: '🌙 2. Кешке сатылған нанды енгізіңіз',
+    howToStep2Desc: 'Кешке сатылған нан дана санын және оның қаншадан өткенін енгізесіз. Жүйе автоматты түрде барлық шығындарды жүктеп, таза пайданы шығарады.',
+    howToStep3: '📓 3. Тарихты журналға жинақтаңыз',
+    howToStep3Desc: 'Кешкі қорытындыдағы "Күн пайдасын дәптерге жазу" түймесін басыңыз. Сіздің бүкіл айлық тарихыңыз жеке журналда сақталады.',
+    resetBtn: 'Тарихты өшіру (Reset)',
+    ledgerGoBtn: '📓 Журналға өту',
+    calculator: 'Калькулятор',
+    ledger: 'Журнал (Дәптер)',
+    history: 'Толық тарих',
+    activeLabel: 'Белсенді:',
+    cancel: 'Бас тарту',
+    breadPresetTitle: 'Стандартты нан түрлері мен бағаларының баптаулары',
+    breadPresetDesc: 'Осы жерде дайындалатын стандартты нан түрлерінің тізімі мен бағаларын баптап қойсаңыз, әр кеш сайын сатылымды енгізген кезде оларды бір түймемен тез арада қоса аласыз.',
+    breadNameHeader: 'Нан түрінің атауы',
+    breadPriceHeader: 'Сату бағасы',
+    breadWeightHeader: 'Салмағы (грамм)',
+    breadWeightLabel: 'Нан салмағы (г)',
+    addPresetBtn: '+ Стандартты нан түрін қосу'
   }
 };
 
@@ -212,12 +257,7 @@ export default function App() {
   // Navigation sidebar states
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [bakerName, setBakerName] = useState<string>(() => {
-    const saved = localStorage.getItem('nonvoy_baker_name') || '';
-    if (saved === 'Sardor') {
-      localStorage.setItem('nonvoy_baker_name', '');
-      return '';
-    }
-    return saved;
+    return localStorage.getItem('nonvoy_baker_name') || '';
   });
   const [isEditingBakerName, setIsEditingBakerName] = useState<boolean>(false);
   const [bakerNameInput, setBakerNameInput] = useState<string>('');
@@ -231,9 +271,12 @@ export default function App() {
   }, [bakerName]);
 
   const saveBakerName = (val: string) => {
-    const cleaned = val.replace(/[^a-zA-Zа-яА-ЯёЁo'O'g'G'\s]/g, '').trim(); // faqat harflar va ism yozilsin
-    setBakerName(cleaned);
-    localStorage.setItem('nonvoy_baker_name', cleaned);
+    // Support Uzbek, Kazakh cyrillic characters, Russian, English and spaces
+    const cleaned = val.replace(/[^a-zA-Zа-яА-ЯёЁәӘіІңҢғҒүҮұҰқҚөӨһҺo'O'g'G'’‘`\s]/g, '').trim();
+    if (cleaned) {
+      setBakerName(cleaned);
+      localStorage.setItem('nonvoy_baker_name', cleaned);
+    }
     setIsEditingBakerName(false);
   };
 
@@ -246,13 +289,28 @@ export default function App() {
   const [showResetConfirm, setShowResetConfirm] = useState<boolean>(false);
 
   // New Language State
-  const [language, setLanguage] = useState<'uz' | 'en' | 'ru'>(() => {
-    return (localStorage.getItem('nonvoy_lang') as 'uz' | 'en' | 'ru') || 'uz';
+  const [language, setLanguage] = useState<'uz' | 'en' | 'ru' | 'kk'>(() => {
+    return (localStorage.getItem('nonvoy_lang') as 'uz' | 'en' | 'ru' | 'kk') || 'uz';
+  });
+
+  // New Currency State
+  const [currency, setCurrency] = useState<'UZS' | 'KZT'>(() => {
+    return (localStorage.getItem('nonvoy_currency') as 'UZS' | 'KZT') || 'UZS';
   });
 
   useEffect(() => {
     localStorage.setItem('nonvoy_lang', language);
+    // Auto-select currency if language changes
+    if (language === 'kk') {
+      setCurrency('KZT');
+    } else if (language === 'uz') {
+      setCurrency('UZS');
+    }
   }, [language]);
+
+  useEffect(() => {
+    localStorage.setItem('nonvoy_currency', currency);
+  }, [currency]);
 
   // New Font State
   const [activeFont, setActiveFont] = useState<string>(() => {
@@ -419,17 +477,35 @@ export default function App() {
   const [salaryNote, setSalaryNote] = useState<string>('');
 
   // Primary states representing the daily run
-  const [bagsCount, setBagsCount] = useState<number>(3); // 3 qop un
-  const [breadPerBag, setBreadPerBag] = useState<number>(395); // 1 qopdan 395 dona non
-  const [flourPrice, setFlourPrice] = useState<number>(280000); // 1 qop un narxi (so'm)
-  const [sellingPrice, setSellingPrice] = useState<number>(3000); // bir dona non sotish narxi
+  const [bagsCount, setBagsCount] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_bags_count');
+    return saved ? parseFloat(saved) : 3;
+  });
+  const [breadPerBag, setBreadPerBag] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_bread_per_bag');
+    return saved ? parseInt(saved) : 395;
+  });
+  const [flourPrice, setFlourPrice] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_flour_price');
+    return saved ? parseFloat(saved) : 280000;
+  });
+  const [sellingPrice, setSellingPrice] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_selling_price');
+    return saved ? parseFloat(saved) : 3000;
+  });
 
   // Evening Inputs for final output calculation
   const [eveningDate, setEveningDate] = useState<string>(() => new Date().toISOString().split('T')[0]); // Custom Date for independent daily recall
   const [eveningSoldBreads, setEveningSoldBreads] = useState<number>(1185); // sold loaves count
-  const [eveningSellingPrice, setEveningSellingPrice] = useState<number>(3000); // actual price sold at
+  const [eveningSellingPrice, setEveningSellingPrice] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_selling_price');
+    return saved ? parseFloat(saved) : 3000;
+  });
   const [eveningDamagedBreads, setEveningDamagedBreads] = useState<number>(5); // damaged / family use / gifts
-  const [eveningFlourPrice, setEveningFlourPrice] = useState<number>(280000); // raw flour sack price today
+  const [eveningFlourPrice, setEveningFlourPrice] = useState<number>(() => {
+    const saved = localStorage.getItem('nonvoy_flour_price');
+    return saved ? parseFloat(saved) : 280000;
+  });
   const [eveningNote, setEveningNote] = useState<string>(''); // custom note for the ledger
 
   // Multi-price bread calculator states
@@ -465,11 +541,21 @@ export default function App() {
   }, [bagsCount, breadPerBag, eveningDamagedBreads]);
 
   useEffect(() => {
+    localStorage.setItem('nonvoy_bags_count', bagsCount.toString());
+  }, [bagsCount]);
+
+  useEffect(() => {
+    localStorage.setItem('nonvoy_bread_per_bag', breadPerBag.toString());
+  }, [breadPerBag]);
+
+  useEffect(() => {
     setEveningSellingPrice(sellingPrice);
+    localStorage.setItem('nonvoy_selling_price', sellingPrice.toString());
   }, [sellingPrice]);
 
   useEffect(() => {
     setEveningFlourPrice(flourPrice);
+    localStorage.setItem('nonvoy_flour_price', flourPrice.toString());
   }, [flourPrice]);
 
   // Secondary data states
@@ -772,6 +858,63 @@ export default function App() {
       className={`min-h-screen flex flex-row ${activeFont} transition-all duration-300 relative overflow-x-hidden ${getBackgroundClass()}`}
       style={getBackgroundStyle()}
     >
+      
+      {/* MANDATORY USERNAME ONBOARDING MODAL */}
+      {!bakerName && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-stone-950/90 backdrop-blur-xl" />
+          <div className="relative w-full max-w-md p-6 sm:p-8 bg-[#1B120E] border border-amber-500/30 rounded-3xl shadow-2xl text-center space-y-6 transform animate-fade-in z-55">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 shrink-0 bg-amber-500/10 rounded-2xl flex items-center justify-center border border-amber-500/20 mb-4 animate-bounce">
+                <UzbekNonLogo className="w-12 h-12" />
+              </div>
+              <h2 className="text-xl font-black text-amber-500 tracking-tight">
+                {language === 'kk' ? 'Атыңызды енгізіңіз' : language === 'ru' ? 'Введите ваше имя' : language === 'en' ? 'Enter your name' : 'Ismingizni kiriting'}
+              </h2>
+              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+                {language === 'kk' ? 'Бағдарламаны пайдалану үшін есіміңізді жазуыңыз қажет' : language === 'ru' ? 'Чтобы продолжить работу, введите ваше имя' : language === 'en' ? 'Please enter your name to continue using the application.' : 'Tizimdan foydalanishni boshlash uchun carries ismingizni yozishingiz majburiy.'}
+              </p>
+            </div>
+            
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              const val = (e.currentTarget.elements.namedItem('baker-onboard-name') as HTMLInputElement).value;
+              if (val.trim()) {
+                saveBakerName(val.trim());
+              }
+            }} className="space-y-4">
+              <input
+                type="text"
+                name="baker-onboard-name"
+                required
+                placeholder={language === 'kk' ? 'Мысалы: Сардар' : language === 'ru' ? 'Например: Сардор' : language === 'en' ? 'E.g., John' : 'Masalan: Sardor'}
+                className="w-full text-center text-sm font-extrabold bg-amber-500/5 hover:bg-amber-500/10 border border-amber-500/20 focus:border-amber-500/70 focus:ring-1 focus:ring-amber-500 rounded-2xl px-4 py-3 text-slate-100 placeholder-slate-500 outline-none transition-all"
+                autoFocus
+              />
+              <button
+                type="submit"
+                className="w-full py-3 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-[#1C1613] font-black tracking-wider uppercase text-xs rounded-2xl transition-all text-center hover:shadow-[0_0_15px_rgba(245,158,11,0.5)] cursor-pointer"
+              >
+                {language === 'kk' ? 'Кіру' : language === 'ru' ? 'Войти' : language === 'en' ? 'Enter' : 'Kirish'}
+              </button>
+            </form>
+
+            <div className="flex justify-center items-center gap-2 pt-2 border-t border-amber-900/10">
+              <span className="text-[10px] text-slate-500 uppercase tracking-widest font-black">Tilni tanlang / Язык / Language:</span>
+              <select 
+                value={language} 
+                onChange={(e) => setLanguage(e.target.value as any)} 
+                className="text-[10px] font-black uppercase tracking-wider bg-transparent text-amber-500 border-none outline-none cursor-pointer"
+              >
+                <option value="uz">UZ 🇺🇿</option>
+                <option value="kk">KK 🇰🇿</option>
+                <option value="en">EN 🇬🇧</option>
+                <option value="ru">RU 🇷🇺</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* Background Glassy Blur Overlay */}
       <div 
@@ -1170,7 +1313,7 @@ export default function App() {
                     </span>
                   </div>
                   <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-sans">
-                    Nonvoy <span className="text-amber-450 text-amber-400">Ish Daftari</span> va Kalkulyatori
+                    Nonvoy <span className="text-amber-400">Ish Daftari</span> va Kalkulyatori
                   </h2>
                   <p className="text-slate-350 text-[11px] sm:text-xs md:text-sm max-w-xl leading-relaxed font-sans font-medium">
                     Tandirxonadagi kunni oson boshlang, xamir qorishni aniq rejalashtiring va kechqurun sotilgan nonlar hisobida sof foydani daftarda doimiy to'plang.
@@ -1181,7 +1324,7 @@ export default function App() {
                   <button
                     type="button"
                     onClick={handleDataReset}
-                    className="px-2.5 sm:px-3.5 py-2.5 sm:py-2 border border-amber-900/30 hover:border-amber-700 bg-amber-955/40 hover:bg-amber-950/80 text-amber-300 hover:text-white rounded-xl text-[10px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer hover:scale-102 active:scale-98 duration-200"
+                    className="px-2.5 sm:px-3.5 py-2.5 sm:py-2 border border-amber-900/30 hover:border-amber-700 bg-amber-950/40 hover:bg-amber-950/80 text-amber-300 hover:text-white rounded-xl text-[10px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer hover:scale-102 active:scale-98 duration-200"
                   >
                     <RefreshCw className="w-3 sm:w-3.5 sm:h-3.5 animate-spin-slow shrink-0" /> <span className="truncate">Tarixni to'chirish</span>
                   </button>
@@ -1196,42 +1339,11 @@ export default function App() {
               </div>
             </div>
 
-            {/* EASY ONBOARDING / WHAT-TO-DO GUIDE FOR THE USER'S BROTHER */}
-            <div className={`p-4 rounded-xl border shadow-xs transition-colors ${
-              theme === 'dark' ? 'bg-[#1E1916]/80 border-[#312620]' : 'bg-amber-50 border-amber-200/50'
-            }`}>
-              <h3 className={`text-xs font-black mb-2 flex items-center gap-2 uppercase tracking-wide ${
-                theme === 'dark' ? 'text-amber-400' : 'text-amber-900'
-              }`}>
-                <BookOpen className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Ish tartibi qo'llanmasi (Qisqa ko'rsatma):
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px] leading-normal font-sans font-medium">
-                <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
-                }`}>
-                  <span className="font-extrabold text-amber-500 block mb-0.5">☀️ 1. Un qopini yozing</span>
-                  Qop sonini yozing, suv, tuz va drojji retsepti tezda hisoblanadi.
-                </div>
-                <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
-                }`}>
-                  <span className="font-extrabold text-amber-500 block mb-0.5">🌙 2. Sotilgan nonni yozing</span>
-                  Kechqurun sotilgan dona non sonini kiriting. Tizim sof foydani hisoblaydi.
-                </div>
-                <div className={`p-2.5 rounded-lg border ${
-                  theme === 'dark' ? 'bg-[#241D1A]/95 border-[#3E3027] text-slate-300' : 'bg-white border-amber-100 text-slate-600'
-                }`}>
-                  <span className="font-extrabold text-amber-500 block mb-0.5">📓 3. Daftarga yozib qo'ying</span>
-                  "Kunlik foydani yozish" tugmasini bosing — barcha tarix jurnalda saqlanadi.
-                </div>
-              </div>
-            </div>
-
             {/* THE COMBINED COMPACT COCKPIT GRID */}
             <div className={`grid ${isSplitView ? 'grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 sm:h-[calc(100vh-140px)] overflow-visible sm:overflow-hidden items-stretch' : 'grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start'}`}>
               
               {/* LEFT COLUMN: THE COMPACT INTEGRATED CALCULATOR (☀️ ERTALAB & 🌙 KECHQURUN) */}
-              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16 space-y-4' : 'lg:col-span-5 space-y-4 sm:space-y-6'}`} id="calculator-section">
+              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16 space-y-4' : 'lg:col-span-12 space-y-4 sm:space-y-6'}`} id="calculator-section">
                 
                 {/* COMPACT CARD FOR CALCULATION */}
                 <div className={`p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border shadow-xl flex flex-col justify-between transition-all ${
@@ -1251,7 +1363,9 @@ export default function App() {
                       }`}>Bugungi Hisob-kitob</span>
                     </div>
 
-                    <div className="flex bg-[#2E241E]/40 p-1 rounded-xl border border-amber-900/10 shrink-0 select-none self-start sm:self-auto w-full sm:w-auto">
+                    <div className={`flex bg-[#2E241E]/40 p-1 rounded-xl border border-amber-900/10 shrink-0 select-none self-start sm:self-auto w-full sm:w-auto ${
+                      isSplitView ? '' : 'lg:hidden'
+                    }`}>
                       <button
                         type="button"
                         onClick={() => setCalculatorTab('morning')}
@@ -1277,9 +1391,29 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Sub Tab: Morning (Ertalabki) */}
-                  {calculatorTab === 'morning' ? (
-                    <div className="space-y-4 animate-fade-in text-xs font-sans">
+                  {/* Responsive Split System for columns */}
+                  <div className={`grid grid-cols-1 ${
+                    isSplitView 
+                      ? 'md:grid-cols-2 gap-6 md:gap-8' 
+                      : 'lg:grid-cols-2 gap-6 lg:gap-8 lg:divide-x lg:divide-amber-900/10'
+                  } items-start`}>
+
+                    {/* LEFT COLUMN: Morning (☀️ Ertalab) */}
+                    <div className={`${
+                      isSplitView 
+                        ? (calculatorTab === 'morning' ? 'block' : 'hidden md:block')
+                        : (calculatorTab === 'morning' ? 'block' : 'hidden lg:block')
+                    } space-y-4 animate-fade-in text-xs font-sans`}>
+                      {!isSplitView && (
+                        <div className="hidden lg:flex items-center gap-1.5 border-b border-amber-900/10 pb-2.5 mb-2">
+                          <span className="p-1 px-1.5 bg-amber-600/25 rounded-md text-amber-500 font-extrabold text-[10px] tracking-wide uppercase">
+                            Ertalabki qism
+                          </span>
+                          <span className={`text-[11px] font-black uppercase tracking-wider block ${
+                            theme === 'dark' ? 'text-amber-400' : 'text-slate-800'
+                          }`}>☀️ Ertalabki Reja va Masalliqlar</span>
+                        </div>
+                      )}
                       {/* Sacks Input block */}
                       <div className={`${
                         theme === 'dark' ? 'bg-[#251E1B] border-[#3E322A]' : 'bg-slate-50'
@@ -1347,7 +1481,7 @@ export default function App() {
                       </div>
 
                       {/* Output metric card */}
-                      <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-3xl p-5 shadow-lg space-y-4">
+                      <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-3xl p-4 xs:p-5 shadow-lg space-y-4">
                         <div className="flex items-center justify-between gap-2 border-b border-white/20 pb-2.5">
                           <span className="text-[10px] font-black tracking-widest text-amber-50 uppercase block leading-none">
                             🔮 TAXMINIY NON CHIQISHI HISOBI
@@ -1356,14 +1490,14 @@ export default function App() {
                         
                         {/* Row 1: The input with larger numbers and control buttons */}
                         <div className="space-y-2">
-                          <label className="text-[11px] font-extrabold text-[#1C1613] uppercase tracking-wide block" htmlFor="yield-per-bag-input">
+                          <label className="text-[11px] font-extrabold text-amber-50 uppercase tracking-wide block" htmlFor="yield-per-bag-input">
                             1 qopdan o'rtacha necha dona non chiqadi?
                           </label>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-1.5 xs:gap-2">
                             <button
                               type="button"
                               onClick={() => setBreadPerBag(Math.max(0, breadPerBag - 5))}
-                              className="w-11 h-11 shrink-0 rounded-2xl bg-black/15 hover:bg-black/25 text-[#1C1613] font-black text-base flex items-center justify-center transition-all active:scale-90 cursor-pointer select-none"
+                              className="w-10 h-10 xs:w-11 xs:h-11 shrink-0 rounded-2xl bg-white/20 hover:bg-white/30 text-white font-black text-base flex items-center justify-center transition-all active:scale-90 cursor-pointer select-none"
                               title="5 taga kamaytirish"
                             >
                               -5
@@ -1374,14 +1508,14 @@ export default function App() {
                               id="yield-per-bag-input"
                               value={breadPerBag || ''}
                               onChange={(e) => setBreadPerBag(Math.max(0, parseInt(e.target.value) || 0))}
-                              className="flex-1 h-11 text-center font-black text-xl bg-white text-slate-900 border-none rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-300 shadow-md font-mono"
+                              className="flex-1 min-w-0 h-10 xs:h-11 text-center font-black text-lg xs:text-xl bg-white text-slate-900 border-none rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-300 shadow-md font-mono"
                               title="Har qopdan chiqish soni"
                             />
 
                             <button
                               type="button"
                               onClick={() => setBreadPerBag(breadPerBag + 5)}
-                              className="w-11 h-11 shrink-0 rounded-2xl bg-black/15 hover:bg-black/25 text-[#1C1613] font-black text-base flex items-center justify-center transition-all active:scale-90 cursor-pointer select-none"
+                              className="w-10 h-10 xs:w-11 xs:h-11 shrink-0 rounded-2xl bg-white/20 hover:bg-white/30 text-white font-black text-base flex items-center justify-center transition-all active:scale-90 cursor-pointer select-none"
                               title="5 taga ko'paytirish"
                             >
                               +5
@@ -1431,7 +1565,7 @@ export default function App() {
                         theme === 'dark' ? 'bg-[#251E1B] border-[#3E322A]' : 'bg-slate-50'
                       } border rounded-2xl p-4 space-y-2.5 shadow-inner`}>
                         <span className={`text-[9.5px] font-black uppercase tracking-wider block ${
-                          theme === 'dark' ? 'text-slate-400' : 'text-slate-505'
+                          theme === 'dark' ? 'text-slate-400' : 'text-slate-500'
                         }`}>Xamir uchun kerakli masalliqlar:</span>
                         
                         <div className="grid grid-cols-3 gap-2 text-center text-xs">
@@ -1439,7 +1573,7 @@ export default function App() {
                           <div className={`p-2 rounded-xl border ${
                             theme === 'dark' ? 'bg-[#1C1613] border-[#3E322A]' : 'bg-white border-slate-150'
                           } shadow-sm`}>
-                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-505'}`}>Jami Un</span>
+                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Jami Un</span>
                             <span className={`font-black tracking-tight ${theme === 'dark' ? 'text-amber-400' : 'text-slate-800'}`}>{(bagsCount * 50).toFixed(0)} kg</span>
                           </div>
 
@@ -1447,7 +1581,7 @@ export default function App() {
                           <div className={`p-2 rounded-xl border ${
                             theme === 'dark' ? 'bg-[#1C1613] border-[#3E322A]' : 'bg-white border-slate-150'
                           } shadow-sm`}>
-                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-505'}`}>Toza Suv</span>
+                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Toza Suv</span>
                             <span className="font-black tracking-tight text-blue-500">{waterLiters.toFixed(1)} L</span>
                           </div>
 
@@ -1455,7 +1589,7 @@ export default function App() {
                           <div className={`p-2 rounded-xl border ${
                             theme === 'dark' ? 'bg-[#1C1613] border-[#3E322A]' : 'bg-white border-slate-150'
                           } shadow-sm`}>
-                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-505'}`}>Tuz & Xamir</span>
+                            <span className={`text-[8px] block font-bold uppercase tracking-wider mb-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Tuz & Xamir</span>
                             <span className="font-extrabold tracking-tight text-amber-600 text-[10px] block mt-0.5">
                               {(saltKg * 1000).toFixed(0)}g / {(yeastKg * 1000).toFixed(0)}g
                             </span>
@@ -1463,13 +1597,30 @@ export default function App() {
                         </div>
                       </div>
                     </div>
-                  ) : (
-                    // Sub Tab: Evening (Kechki)
-                    <form onSubmit={handleSaveEveningLog} className="space-y-4 animate-fade-in text-xs font-sans">
+
+                    {/* Evening (Kechqurunki) Block */}
+                    <form 
+                      onSubmit={handleSaveEveningLog} 
+                      className={`${
+                        isSplitView 
+                          ? (calculatorTab === 'evening' ? 'block' : 'hidden md:block md:pl-6 md:border-l md:border-dashed md:border-amber-900/15')
+                          : (calculatorTab === 'evening' ? 'block' : 'hidden lg:block lg:pl-6 lg:border-l lg:border-dashed lg:border-amber-900/15')
+                      } space-y-4 animate-fade-in text-xs font-sans`}
+                    >
+                      {!isSplitView && (
+                        <div className="hidden lg:flex items-center gap-1.5 border-b border-amber-900/10 pb-2.5 mb-2">
+                          <span className="p-1 px-1.5 bg-amber-600/30 rounded-md text-amber-500 font-extrabold text-[10px] tracking-wide uppercase">
+                            Kechki qism
+                          </span>
+                          <span className={`text-[11px] font-black uppercase tracking-wider block ${
+                            theme === 'dark' ? 'text-amber-400' : 'text-slate-800'
+                          }`}>🌙 Kechqurunki Sotuv va Daromad</span>
+                        </div>
+                      )}
                       {/* Custom log date */}
                       <div className="space-y-1">
                         <label className={`text-[9.5px] font-black uppercase tracking-wide leading-tight ${
-                          theme === 'dark' ? 'text-slate-300' : 'text-slate-505'
+                          theme === 'dark' ? 'text-slate-300' : 'text-slate-500'
                         }`} htmlFor="evening-workflow-date">
                           Sana / Kunni tanlash:
                         </label>
@@ -1656,7 +1807,7 @@ export default function App() {
                           </button>
 
                           {/* Dynamic multi-price Summary Box */}
-                          <div className={`p-3 rounded-xl border flex justify-between gap-18 ${
+                          <div className={`p-3 rounded-xl border flex justify-between gap-2 ${
                             theme === 'dark' ? 'bg-[#251E1B] border-amber-900/10' : 'bg-amber-50/50 border-amber-200/50'
                           }`}>
                             <div>
@@ -1688,7 +1839,7 @@ export default function App() {
                               min="0"
                               className={`w-full text-center text-xs font-black border rounded-lg p-2 focus:ring-1 focus:ring-amber-500 ${
                                 theme === 'dark' 
-                                  ? 'bg-[#1C1613] text-slate-200 border-amber-655/30 font-mono' 
+                                  ? 'bg-[#1C1613] text-slate-200 border-amber-600/30' 
                                   : 'bg-slate-50 border-slate-200'
                               }`}
                               value={eveningFlourPrice}
@@ -1704,7 +1855,7 @@ export default function App() {
                               <label className={`${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'} uppercase tracking-wide font-black`} htmlFor="compact-sold-count">
                                 Bugun nechta non sotildi? (dona)
                               </label>
-                              <span className="text-slate-505 bg-[#2A211D] font-mono px-2 py-0.5 rounded text-[8.5px] font-black border border-amber-550/20">
+                              <span className="text-slate-500 bg-[#2A211D] font-mono px-2 py-0.5 rounded text-[8.5px] font-black border border-amber-500/20">
                                 Taxminiy reja: ~{expectedTotalBreads} ta
                               </span>
                             </div>
@@ -1730,7 +1881,7 @@ export default function App() {
                                 id="compact-sold-count"
                                 required
                                 min="0"
-                                className={`w-28 text-center border rounded-xl p-2.5 font-black text-lg focus:outline-none focus:ring-2 focus:ring-amber-500 ${
+                                className={`w-20 xs:w-24 sm:w-28 min-w-0 text-center border rounded-xl p-2.5 font-black text-lg focus:outline-none focus:ring-2 focus:ring-amber-500 ${
                                   theme === 'dark' 
                                     ? 'bg-[#1C1613] text-amber-400 border-amber-500/30 font-mono' 
                                     : 'bg-[#FDFDFD] text-slate-800 border-slate-200 shadow-inner'
@@ -1749,7 +1900,7 @@ export default function App() {
                               <button
                                 type="button"
                                 onClick={() => setEveningSoldBreads(eveningSoldBreads + 50)}
-                                className="px-2 py-3 text-[10px] font-black rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-555 cursor-pointer active:scale-90 transition-all text-center flex-1"
+                                className="px-2 py-3 text-[10px] font-black rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-500 cursor-pointer active:scale-90 transition-all text-center flex-1"
                                 title="50 ta qo'shish"
                               >
                                 +50
@@ -1784,7 +1935,7 @@ export default function App() {
                             {/* Flour price */}
                             <div className="space-y-1">
                               <label className={`text-[9.5px] font-black block uppercase tracking-wide ${
-                                theme === 'dark' ? 'text-slate-300' : 'text-slate-505'
+                                theme === 'dark' ? 'text-slate-300' : 'text-slate-500'
                               }`} htmlFor="compact-fl-price">
                                 1 qop un narxi bugun (so'm)
                               </label>
@@ -1796,7 +1947,7 @@ export default function App() {
                                 min="0"
                                 className={`w-full text-center text-xs font-black border rounded-lg p-2 focus:ring-1 focus:ring-amber-500 ${
                                   theme === 'dark' 
-                                    ? 'bg-[#1C1613] text-slate-200 border-amber-655/30 font-mono' 
+                                    ? 'bg-[#1C1613] text-slate-200 border-amber-600/30 font-mono' 
                                     : 'bg-slate-50 border-slate-200'
                                 }`}
                                 value={eveningFlourPrice}
@@ -1811,7 +1962,7 @@ export default function App() {
                       <div className="grid grid-cols-2 gap-3.5">
                         <div className="space-y-1">
                           <label className={`text-[9.5px] font-black block uppercase tracking-wide ${
-                            theme === 'dark' ? 'text-slate-300' : 'text-slate-505'
+                            theme === 'dark' ? 'text-slate-300' : 'text-slate-500'
                           }`} htmlFor="compact-damaged-count">
                             Zarar (singan nonlar)
                           </label>
@@ -1819,7 +1970,7 @@ export default function App() {
                             <button
                               type="button"
                               onClick={() => setEveningDamagedBreads(Math.max(0, eveningDamagedBreads - 1))}
-                              className="w-8 h-8 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 font-extrabold text-base flex items-center justify-center transition-all cursor-pointer select-none active:scale-95"
+                              className="w-8 h-8 shrink-0 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 font-extrabold text-base flex items-center justify-center transition-all cursor-pointer select-none active:scale-95"
                             >
                               -
                             </button>
@@ -1828,7 +1979,7 @@ export default function App() {
                               id="compact-damaged-count"
                               required
                               min="0"
-                              className={`flex-1 py-1.5 text-center text-xs font-black border rounded-lg focus:ring-1 focus:ring-amber-500 ${
+                              className={`flex-1 min-w-0 w-full py-1.5 text-center text-xs font-black border rounded-lg focus:ring-1 focus:ring-amber-500 ${
                                 theme === 'dark' 
                                   ? 'bg-[#1C1613] text-amber-400 border-amber-500/30 font-mono' 
                                   : 'bg-slate-50 border-slate-200'
@@ -1839,7 +1990,7 @@ export default function App() {
                             <button
                               type="button"
                               onClick={() => setEveningDamagedBreads(eveningDamagedBreads + 1)}
-                              className="w-8 h-8 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 font-extrabold text-base flex items-center justify-center transition-all cursor-pointer select-none active:scale-95"
+                              className="w-8 h-8 shrink-0 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 font-extrabold text-base flex items-center justify-center transition-all cursor-pointer select-none active:scale-95"
                             >
                               +
                             </button>
@@ -1858,7 +2009,7 @@ export default function App() {
 
                       <div className="space-y-1">
                         <label className={`text-[9px] font-black block uppercase tracking-wide ${
-                          theme === 'dark' ? 'text-slate-300' : 'text-slate-505'
+                          theme === 'dark' ? 'text-slate-300' : 'text-slate-500'
                         }`} htmlFor="compact-note">
                           Eslatma yoki belgi:
                         </label>
@@ -1868,7 +2019,7 @@ export default function App() {
                           placeholder="masalan: bugungi un juda sifatli ekan"
                           className={`w-full text-xs p-2 border rounded-xl focus:ring-1 focus:ring-amber-500 ${
                             theme === 'dark' 
-                              ? 'bg-[#1C1613] text-[#EDE8E0] border-amber-655/20 placeholder-slate-600' 
+                              ? 'bg-[#1C1613] text-[#EDE8E0] border-amber-600/20 placeholder-slate-600' 
                               : 'bg-slate-50 border-slate-200 placeholder-slate-400'
                           }`}
                           value={eveningNote}
@@ -1880,13 +2031,13 @@ export default function App() {
                       <button
                         type="submit"
                         id="save-compact-log-btn"
-                        className="w-full py-3.5 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-750 text-[#1C1613] font-black text-xs uppercase tracking-widest rounded-xl hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 border border-amber-450/40 flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full py-3.5 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-[#1C1613] font-black text-xs uppercase tracking-widest rounded-xl hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 border border-amber-400/40 flex items-center justify-center gap-2 cursor-pointer"
                       >
                         📝 Kunning Foydasini Jurnalga Yozish
                         <ArrowRight className="w-3.5 h-3.5 animate-bounce" />
                       </button>
                     </form>
-                  )}
+                  </div>
                 </div>
 
                 {/* QUICK USAGE GUIDE CARD IN LEFT COL */}
@@ -1902,7 +2053,7 @@ export default function App() {
               </div>
 
               {/* RIGHT COLUMN: THE LEDGER REGISTER AND STATS (📓 SHAXSIY DAFTAR) */}
-              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16' : 'lg:col-span-7'}`} id="ledger-section">
+              <div className={`${isSplitView ? 'sm:h-full sm:overflow-y-auto pr-0 sm:pr-2 pb-16' : 'lg:col-span-12'}`} id="ledger-section">
                 {/* Ledger component contains complete statistics dashboard and tables */}
                 <Ledger
                   logs={logs}
@@ -2271,9 +2422,10 @@ export default function App() {
                     {TRANSLATIONS[language].langSelect}
                   </span>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                     {[
                       { id: 'uz', label: 'O\'zbekcha 🇺🇿', desc: 'Tizimning to\'liq o\'zbek tilidagi qulay interfeysi.', welcome: 'Xush kelibsiz!' },
+                      { id: 'kk', label: 'Қазақша 🇰🇿', desc: 'Жүйенің толық қазақ тіліндегі ыңғайлы интерфейсі.', welcome: 'Қош келдіңіз!' },
                       { id: 'en', label: 'English 🇬🇧', desc: 'Complete system in international English vocabulary.', welcome: 'Welcome!' },
                       { id: 'ru', label: 'Русский 🇷🇺', desc: 'Русскоязычное оформление журнала и калькулятора.', welcome: 'Добро пожаловать!' }
                     ].map((langItem) => (
@@ -2288,7 +2440,7 @@ export default function App() {
                         }`}
                       >
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-black">{langItem.label}</span>
+                          <span className="text-sm font-black text-slate-100">{langItem.label}</span>
                           {language === langItem.id && <span className="bg-amber-500 text-[#1C1613] text-[9px] font-black uppercase px-2 py-0.5 rounded-lg">{TRANSLATIONS[language].activeLabel}</span>}
                         </div>
                         <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
@@ -2299,6 +2451,36 @@ export default function App() {
                         </div>
                       </button>
                     ))}
+                  </div>
+
+                  {/* System Currency Selector */}
+                  <div className="pt-4 border-t border-amber-500/10 space-y-3">
+                    <span className="text-xs font-bold uppercase tracking-wider text-amber-500 block">
+                      💵 {language === 'kk' ? 'Жүйелік валюта (Pul birligi):' : language === 'ru' ? 'Системная валюта (Pul birligi):' : language === 'en' ? 'System Currency:' : 'Tizim Pul Birligi:'}
+                    </span>
+                    <div className="flex flex-wrap gap-3">
+                      {[
+                        { id: 'UZS', label: 'So\'m (UZS - 🇺🇿)', symbol: 'so\'m' },
+                        { id: 'KZT', label: 'Tenge (KZT - ₸)', symbol: '₸' }
+                      ].map((currItem) => {
+                        const isSelected = currency === currItem.id;
+                        return (
+                          <button
+                            key={currItem.id}
+                            type="button"
+                            onClick={() => setCurrency(currItem.id as any)}
+                            className={`flex-1 min-w-[150px] py-3 px-4 rounded-xl border text-sm font-black transition-all cursor-pointer flex items-center justify-between ${
+                              isSelected
+                                ? 'bg-amber-500/10 border-amber-500 text-amber-500 ring-1 ring-amber-500/30'
+                                : 'border-amber-500/10 hover:border-amber-500/35 text-slate-400 bg-transparent'
+                            }`}
+                          >
+                            <span>{currItem.label}</span>
+                            <span className="text-xs font-black bg-amber-500 text-[#1C1613] px-2 py-0.5 rounded-lg">{currItem.symbol}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               )}
